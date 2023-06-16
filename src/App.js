@@ -1,7 +1,6 @@
-import ExpenseItem from "./ExpenseItem";
-import  "./Expenses.css";
+import Expenses from "./components/Expenses/Expenses";
 function App() {
-  const expenses = [
+   const expenses = [
     {
       id: 'e1',
       title: 'Toilet Paper',
@@ -23,11 +22,7 @@ function App() {
     },
   ];
   return (
-    <div className="expenses">
-      {expenses.map(item=>(
-        <ExpenseItem data = {item}/>
-      ))}
-    </div>
+   <Expenses expenses={expenses}/>
   );
 }
 
